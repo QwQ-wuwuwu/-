@@ -301,6 +301,13 @@ module.exports = {
       options: {
         cacheDirectory: true, // 开启babel编译缓存
         cacheCompression: false, // 缓存文件不要压缩
+        presets: [ // 配置presets和plugins时，可以不必创建babel.config.js文件
+          [
+            "@babel/preset-env",
+            { useBuiltIns: "usage", corejs: { version: "3", proposals: true } }, // 按需加载core-js的polyfill
+          ]
+        ],
+        plugins: ["@babel/plugin-transform-runtime"]
       },
     },
   ],
