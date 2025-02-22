@@ -21,7 +21,7 @@
 13. git pull 远程仓库地址 分支名：将远程仓库指定分支的代码拉取到本地仓库并且进行合并；
 14. git config --global user.name 用户名：创建用户名；git config --global user.email 邮箱地址：创建邮箱，每次版本变更是会通过邮箱推送消息；
 15. git log：查看所有的提交的日志记录，搭配git reset可回退到指定版本；git log --oneline：在一行查看日志记录；
-16. git reflog：记录了本地仓库的操作历史，包括分支切换、合并、重置等操作，即使在一些操作后出现了提交丢失或者分支丢失的情况下，通过 reflog 也可以找回之前的状态；
+16. git reflog：记录了本地仓库的操作历史，包括分支切换、合并、重置等操作，即使在一些操作后出现了提交丢失或者分支丢失的情况下，通过 git reflog 和 git reset --hard 序号 也可以找回之前的状态；
 17. git status：查看git仓库的变化，只能查看未提交的所有变更的文件状态；
 # .gitignore文件
 用于排除不被git托管的文件或者文件夹。
